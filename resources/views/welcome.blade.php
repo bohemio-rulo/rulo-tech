@@ -8,4 +8,6 @@
 
     <x-case-study />
 
+    <x-contact />
+
 </x-layouts.app>
