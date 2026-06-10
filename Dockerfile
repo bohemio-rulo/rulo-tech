@@ -23,7 +23,7 @@ WORKDIR /var/www
 COPY . .
 
 # Instalar dependencias de PHP y optimizar
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 
 # Instalar Node.js para compilar los assets (Vite)
 RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - \
