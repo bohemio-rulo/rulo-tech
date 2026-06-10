@@ -35,5 +35,7 @@ RUN mkdir -p /var/www/database && touch /var/www/database/database.sqlite
 # Configurar permisos
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache /var/www/database
 
+RUN php artisan migrate --force
+
 # Comando para ejecutar Laravel
 CMD php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
