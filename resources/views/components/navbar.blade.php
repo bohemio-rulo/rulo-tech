@@ -1,5 +1,8 @@
 <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
-    <div class="text-2xl font-bold text-blue-600">RE.</div>
+    <div class="w-48">
+        <x-logo />
+    </div>
+
     <div class="space-x-6 text-sm font-medium">
         <a href="#servicios" class="hover:text-blue-600 transition">Servicios</a>
         <a href="#casos" class="hover:text-blue-600 transition">Casos de Éxito</a>
