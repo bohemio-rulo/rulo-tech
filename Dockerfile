@@ -30,8 +30,10 @@ RUN curl -sL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs
 RUN npm install && npm run build
 
+RUN mkdir -p /var/www/database && touch /var/www/database/database.sqlite
+
 # Configurar permisos
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache /var/www/database
 
 # Comando para ejecutar Laravel
 CMD php artisan serve --host=0.0.0.0 --port=${PORT:-8000}
